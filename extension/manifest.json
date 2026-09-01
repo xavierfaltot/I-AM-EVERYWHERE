@@ -1,31 +1,11 @@
 {
   "manifest_version": 3,
   "name": "I AM EVERYWHERE",
-  "version": "0.5.1",
-  "description": "Deepfake webpage images and videos locally with FaceFusion. Store and switch between multiple source faces.",
-  "permissions": [
-    "activeTab",
-    "storage"
-  ],
-  "host_permissions": [
-    "<all_urls>",
-    "http://127.0.0.1:8765/*"
-  ],
-  "background": {
-    "service_worker": "background.js"
-  },
-  "action": {
-    "default_popup": "popup.html"
-  },
-  "content_scripts": [
-    {
-      "matches": [
-        "<all_urls>"
-      ],
-      "js": [
-        "content.js"
-      ],
-      "run_at": "document_idle"
-    }
-  ]
+  "version": "0.6.1",
+  "description": "Choose from multiple stored faces and deepfake webpage photographs locally with FaceFusion.",
+  "permissions": ["activeTab", "storage"],
+  "host_permissions": ["<all_urls>", "http://127.0.0.1:8765/*"],
+  "background": {"service_worker": "background.js"},
+  "action": {"default_popup": "popup.html"},
+  "content_scripts": [{"matches": ["<all_urls>"], "js": ["content.js"], "run_at": "document_idle"}]
 }
